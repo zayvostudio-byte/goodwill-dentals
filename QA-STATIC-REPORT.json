@@ -1,0 +1,12 @@
+{
+  "ts_files": 22,
+  "doctors": 8,
+  "unique_doctor_image_refs": 8,
+  "bundled_assets": 50,
+  "literal_asset_refs_checked": 57,
+  "missing_imports": [],
+  "missing_assets": [],
+  "confirmed_real_gallery_images": 3,
+  "featured_dentists": 2,
+  "featured_general_practitioners": 4
+}

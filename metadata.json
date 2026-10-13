@@ -1,0 +1,6 @@
+{
+  "name": "Goodwill Dental Care - Dubai",
+  "description": "Premium dental clinic website, instant booking engine, and patient portal app demo for Goodwill Dental Care (Goodwill Healthcare Group) in Jebel Ali, Dubai.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

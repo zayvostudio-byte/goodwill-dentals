@@ -1,0 +1,23 @@
+Goodwill Dental Care — Image Verification Map
+
+Extract the ZIP and open goodwill_asset_verification.jpg to view all 19 supplied images.
+
+Doctor image filename prefixes (match the original full filenames from goodwill dental.zip.zip):
+imgi_3_ = Dr. Nida Iqbal — General Dentist
+imgi_4_ = Dr. Shristi Pradhan — General Dentist
+imgi_5_ = Dr. Benatt George — General Practitioner
+imgi_6_ = Dr. Maliha Arfeen — General Practitioner
+imgi_7_ = Dr. Amber Hanif — General Practitioner
+imgi_8_ = Dr. Mohammed Tasleem — General Practitioner
+imgi_11_ = Dr. Mohammed Tasleem — additional banner
+imgi_12_ = Dr. Sana Samad — General Practitioner
+imgi_14_ = Dr. Charles Augustine — General Practitioner
+
+Other original images:
+imgi_1_ = Goodwill group logo
+imgi_9_ = Goodwill clinic exterior
+imgi_10_ = Clinic staff photo
+imgi_13_ = Consultation room
+pexels-photo-*.png = generic dental imagery (NOT verified Goodwill facility photos)
+
+This verification sheet is a reference, not a replacement for the original images.
