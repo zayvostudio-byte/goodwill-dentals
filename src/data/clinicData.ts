@@ -1,0 +1,233 @@
+import { DentalTreatment, ClinicGalleryPhoto, AppointmentRequest } from '../types';
+// Doctor data must be defined once to prevent names/images from drifting apart.
+export { DENTISTS, GENERAL_PRACTITIONERS } from './doctorsManifest';
+
+export const BUSINESS_DETAILS = {
+  name: 'Goodwill Dental Care',
+  parentGroup: 'Goodwill Healthcare Group',
+  location: '1st Floor, Talal Plaza Hypermarket, Jebel Ali Industrial 1, Dubai, UAE',
+  shortLocation: 'Talal Plaza Hypermarket, Jebel Ali Industrial 1',
+  landline: '+971 4 884 8777',
+  landlineRaw: '+97148848777',
+  phoneHref: 'tel:+97148848777',
+  whatsapp: '+971 58 109 7390',
+  whatsappDigits: '971581097390',
+  whatsappHref: 'https://wa.me/971581097390?text=Hello%20Goodwill%20Dental%20Care,%20I%20would%20like%20to%20inquire%20about%20dental%20appointment%20availability%20in%20Jebel%20Ali.',
+  email: 'goodwillclinics@gmail.com',
+  emailHref: 'mailto:goodwillclinics@gmail.com',
+  website: 'https://goodwillclinics.com/',
+  instagramHandle: '@goodwillclinicsgroup',
+  instagramHref: 'https://www.instagram.com/goodwillclinicsgroup/',
+  hoursListing: 'All Days, 7:30 AM – 11:30 PM',
+  hoursClarification: 'Clinic facility listed hours: Daily, 7:30 AM–11:30 PM. Individual dental clinician consultation times vary according to duty rotas.',
+  disclaimer: 'Goodwill Dental Care operates at Talal Plaza Hypermarket, Jebel Ali Industrial 1, Dubai. Not affiliated with other unrelated regional facilities.',
+};
+
+export const DENTAL_TREATMENTS: DentalTreatment[] = [
+  {
+    id: 'consultation-exam',
+    name: 'Dental Consultation & Oral Examination',
+    category: 'core_verified',
+    statusLabel: 'Please confirm availability',
+    tagline: 'Comprehensive visual oral checkup and clinical diagnosis.',
+    description: 'A thorough dental examination to evaluate your teeth, gums, and oral soft tissues. Our dentists review any symptoms, identify early concerns, and outline honest, individualized care steps without unneeded procedures.',
+    procedureOverview: [
+      'Visual examination of teeth surfaces and gum margins',
+      'Clinical assessment of existing restorations or wear',
+      'Discussion of patient concerns, sensitivity, or pain',
+      'Practical care recommendations tailored to your oral health',
+    ],
+    candidateFor: 'Anyone seeking a regular checkup, experiencing tooth discomfort, or needing professional clinical advice before initiating care.',
+    aftercare: 'Follow the specific hygiene suggestions provided by the attending dentist during your visit.',
+    imagePath: '/assets/goodwill/pexels-photo-3952017.png',
+    imageIsStock: true,
+  },
+  {
+    id: 'scaling-polishing',
+    name: 'Dental Cleaning, Scaling & Polishing',
+    category: 'core_verified',
+    statusLabel: 'Please confirm availability',
+    tagline: 'Removal of plaque, tartar deposits, and external enamel stains.',
+    description: 'Professional dental prophylaxis to clear calculus and tartar that regular brushing cannot eliminate. Gentle ultrasonic scaling is followed by tooth polishing to leave enamel smooth and mouth feeling refreshed.',
+    procedureOverview: [
+      'Gentle ultrasonic scaling to remove supra-gingival calculus',
+      'Interdental cleaning between tight contacts',
+      'Fine prophy paste polishing to buff smooth tooth surfaces',
+      'Oral hygiene instruction on proper home flossing and brushing',
+    ],
+    candidateFor: 'Patients seeking routine tartar removal, prevention of gum inflammation, and surface stain reduction.',
+    aftercare: 'Avoid intensely colored liquids or smoking for a few hours post-polish; mild temperature sensitivity is normal and resolves promptly.',
+    imagePath: '/assets/goodwill/pexels-photo-305567.png',
+    imageIsStock: true,
+  },
+  {
+    id: 'restorative-fillings',
+    name: 'Tooth-Colored Restorations (Fillings)',
+    category: 'core_verified',
+    statusLabel: 'Please confirm availability',
+    tagline: 'Conservative restorative treatment for dental decay or minor chipping.',
+    description: 'Tooth-colored composite resin fillings bond directly to natural tooth enamel, restoring shape, function, and chewing comfort while blending naturally with your smile.',
+    procedureOverview: [
+      'Careful cleaning and preparation of the decayed or damaged area',
+      'Application of dental adhesive and bonding primer',
+      'Incremental placement and contouring of shade-matched composite',
+      'Curing with blue LED light and bite-check smoothing',
+    ],
+    candidateFor: 'Teeth with localized decay, chipped edges, or worn spots requiring durable functional restoration.',
+    aftercare: 'Composite restorations cure instantly; wait until any local numbness subsides before chewing solid foods to avoid biting the cheek or tongue.',
+    imagePath: '/assets/goodwill/pexels-photo-6809639.png',
+    imageIsStock: true,
+  },
+  {
+    id: 'root-canal-therapy',
+    name: 'Root Canal / Endodontic Treatment',
+    category: 'core_verified',
+    statusLabel: 'Please confirm availability',
+    tagline: 'Preserving a natural tooth affected by deep nerve irritation or infection.',
+    description: 'When the internal nerve pulp of a tooth becomes inflamed or infected due to deep decay, endodontic treatment cleans the root canals, disinfects the inner chamber, and seals the tooth to alleviate severe toothache and prevent extraction.',
+    procedureOverview: [
+      'Local numbing for patient comfort during the procedure',
+      'Careful access to internal root canals to remove inflamed tissue',
+      'Thorough disinfection and biomechanical shaping of the canal system',
+      'Biocompatible sealing with gutta-percha and provisional or permanent seal',
+    ],
+    candidateFor: 'Patients with persistent throbbing toothache, sensitivity to hot temperatures, swelling, or deep decay threatening the tooth nerve.',
+    aftercare: 'Avoid chewing hard foods on the treated tooth until permanent crown or filling is placed. Mild tenderness for 2-3 days is manageable with mild analgesics.',
+    imagePath: '/assets/goodwill/pexels-photo-287237.png',
+    imageIsStock: true,
+  },
+  {
+    id: 'tooth-extraction',
+    name: 'Gentle Tooth Extraction',
+    category: 'core_verified',
+    statusLabel: 'Please confirm availability',
+    tagline: 'Careful removal of unrestorable or severely broken teeth.',
+    description: 'When conservative treatments cannot salvage a tooth due to extensive damage, severe periodontal loosening, or crowding, our dentists perform careful extractions with thorough local anesthesia and gentle technique.',
+    procedureOverview: [
+      'Comprehensive local anesthesia to ensure a comfortable experience',
+      'Atraumatic loosening to preserve surrounding alveolar bone',
+      'Sterile gauze placement to encourage natural clot formation',
+      'Explicit verbal and written post-extraction aftercare guidelines',
+    ],
+    candidateFor: 'Severely fractured teeth, unrestorable deep roots, or acute emergency dental situations.',
+    aftercare: 'Bite firmly on the gauze pad for 45 minutes. Do not rinse vigorously, spit, or use a straw for 24 hours to protect the healing clot.',
+    imagePath: '/assets/goodwill/pexels-photo-4971512.png',
+    imageIsStock: true,
+  },
+  {
+    id: 'oral-health-maintenance',
+    name: 'Preventive Oral Health Maintenance',
+    category: 'core_verified',
+    statusLabel: 'Please confirm availability',
+    tagline: 'Ongoing dental monitoring, gum assessments, and hygiene guidance.',
+    description: 'Proactive oral health care to maintain gum health, monitor restorative work, and detect asymptomatic oral conditions before discomfort arises.',
+    procedureOverview: [
+      'Periodic check of gum pocket health and mucosal tissue',
+      'Review of dietary and brushing habits with practical suggestions',
+      'Personalized preventative schedule based on your individual oral profile',
+    ],
+    candidateFor: 'All individuals and families aiming to keep their natural teeth healthy throughout life.',
+    aftercare: 'Maintain twice-daily brushing with fluoride toothpaste and once-daily interdental cleaning.',
+    imagePath: '/assets/goodwill/pexels-photo-6502543.png',
+    imageIsStock: true,
+  },
+  {
+    id: 'cosmetic-smile-review',
+    name: 'Aesthetic Dental Review & Enamel Polish',
+    category: 'draft_verification',
+    statusLabel: 'Draft Concept — In Review with Clinic',
+    tagline: 'Evaluation of tooth discoloration and conservative aesthetic options.',
+    description: 'Discussion and clinical evaluation of tooth discoloration or surface irregularities. Clinical feasibility and options are assessed directly by the dentist during consultation.',
+    procedureOverview: [
+      'Evaluation of tooth surface shade and external stain origins',
+      'Discussion of non-invasive brightening vs. conservative restorations',
+      'Honest explanation of clinical suitability and expected outcomes',
+    ],
+    candidateFor: 'Patients inquiring about conservative aesthetic improvement for surface stains.',
+    aftercare: 'Specific aftercare will be given depending on the chosen conservative procedure.',
+    imagePath: '/assets/goodwill/pexels-photo-4971512.png',
+    imageIsStock: true,
+  },
+];
+
+export const CLINIC_GALLERY: ClinicGalleryPhoto[] = [
+  {
+    id: 'gal-exterior',
+    title: 'Goodwill Dental Care Entrance',
+    caption: 'Authentic clinic entrance on 1st Floor, Talal Plaza Hypermarket, Jebel Ali Industrial 1, Dubai.',
+    path: '/assets/goodwill/imgi_9_clinic_exterior.jpg',
+    category: 'exterior',
+    isRealGoodwill: true,
+  },
+  {
+    id: 'gal-consultation',
+    title: 'Consultation & Clinical Suite',
+    caption: 'Authentic Goodwill consultation room with clinician discussing treatment with a patient.',
+    path: '/assets/goodwill/imgi_13_consultation_room.jpg',
+    category: 'consultation',
+    isRealGoodwill: true,
+  },
+  {
+    id: 'gal-staff',
+    title: 'Clinical Environment & Staff',
+    caption: 'Authentic Goodwill staff member seated in the clinical dental workspace.',
+    path: '/assets/goodwill/imgi_10_staff_dental.jpg',
+    category: 'staff',
+    isRealGoodwill: true,
+  },
+  {
+    id: 'gal-graphic-tasleem',
+    title: 'Clinical Announcement — Dr. Mohammed Tasleem',
+    caption: 'Original Goodwill Healthcare Group information graphic for Dr. Mohammed Tasleem, General Practitioner.',
+    path: '/assets/goodwill/imgi_11_dr_mohammed_tasleem_graphic.jpg',
+    category: 'graphic',
+    isRealGoodwill: true,
+  },
+  {
+    id: 'gal-graphic-sana',
+    title: 'Clinical Announcement — Dr. Sana Samad',
+    caption: 'Original Goodwill Healthcare Group announcement graphic for Dr. Sana Samad, General Practitioner.',
+    path: '/assets/goodwill/imgi_12_dr_sana_samad_graphic.jpg',
+    category: 'graphic',
+    isRealGoodwill: true,
+  },
+  {
+    id: 'gal-graphic-augustine',
+    title: 'Clinical Announcement — Dr. Charles Augustine',
+    caption: 'Original Goodwill Healthcare Group announcement graphic for Dr. Charles Augustine, General Practitioner.',
+    path: '/assets/goodwill/imgi_14_dr_charles_augustine_graphic.jpg',
+    category: 'graphic',
+    isRealGoodwill: true,
+  },
+];
+
+// The browser-only redesign demo has no authenticated server. Never seed or retain
+// apparent real patient records in an openly accessible public portal.
+export const INITIAL_DEMO_REQUESTS: AppointmentRequest[] = [];
+
+export const CLINIC_FAQS = [
+  {
+    q: 'Where is Goodwill Dental Care located in Jebel Ali?',
+    a: 'We are located on the 1st Floor of Talal Plaza Hypermarket in Jebel Ali Industrial 1, Dubai, UAE. Please contact reception for parking and access assistance.',
+  },
+  {
+    q: 'What are the clinic’s operating hours?',
+    a: 'The clinic facility is listed as open all days from 7:30 AM to 11:30 PM. Please note that individual dentist consultation times vary by duty roster; please contact reception to check dentist availability.',
+  },
+  {
+    q: 'How does the online appointment request process work?',
+    a: 'You can select your desired dental care, choose a preferred dentist or next available doctor, and pick a preferred date and time. This website demo does not send a booking to the clinic. Please call or message reception to confirm an actual appointment time.',
+  },
+  {
+    q: 'Can I contact the reception team directly?',
+    a: 'Yes. Call +971 4 884 8777 or send an enquiry to +971 58 109 7390 on WhatsApp. If you have urgent symptoms, contact the clinic directly instead of relying on the demo booking form.',
+  },
+  {
+    q: 'What if I have an urgent toothache today?',
+    a: 'For urgent dental discomfort, we encourage contacting the clinic directly by landline (+971 4 884 8777) or WhatsApp (+971 58 109 7390) so our reception team can advise you on immediate walk-in availability.',
+  },
+  {
+    q: 'Can I choose my preferred dentist?',
+    a: 'Yes! You can specify Dr. Nida Iqbal, Dr. Shristi Pradhan, or select "No Preference" if you wish to see a dentist who may be available at your requested time, subject to confirmation.',
+  },
+];
